@@ -15,7 +15,7 @@ class PoartaFisier:
     def process_files(self):
         db = Database()
 
-        #verifica fisierele din intrari
+        #verifica fisierele din folder intrari
 
 
         for filename in os.listdir(self.directory):
@@ -35,6 +35,8 @@ class PoartaFisier:
                                 VALUES (?, ?, ?, ?)
                             ''', (id_persoana, ora, sens, poarta_name))
                             db.connection.commit()
+                            shutil.move(file_path, os.path.join(self.backup_directory, filename))
+                            #muta fisier procesat in folder backup ><><>.
         db.close()
 
 
