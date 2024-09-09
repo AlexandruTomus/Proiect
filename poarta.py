@@ -11,3 +11,19 @@ class PoartaFisier:
         #folder backup daca nu exista
         if not os.path.exists(self.backup_directory):
             os.makedirs(self.backup_directory)
+
+    
+    def process_files(self):
+        db=Database()
+
+
+        #verif fisierele din intrari
+        for filename in os.listdir(self.directory):
+            if filename.endswith('csv'):
+                poarta_name=filename.split('.')[0]  #-----extrage numele portii din numele fisierului
+
+        #citeste fisier csv
+        file_path=os.path.join(self.directory, filename)
+        with open(file_path, mode='r') as file:
+            csv_reader=csv.reader(file)
+            
