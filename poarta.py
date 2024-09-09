@@ -1,3 +1,4 @@
+#gestionare fisier csv
 import os
 import csv
 import shutil
@@ -39,4 +40,7 @@ class PoartaFisier:
                             #muta fisier procesat in folder backup ><><>.
         db.close()
 
-
+#Test
+# if __name__ == "__main__":
+#     poarta = PoartaFisier()
+#     poarta.process_files()
