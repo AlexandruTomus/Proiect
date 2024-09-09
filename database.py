@@ -44,5 +44,15 @@ class Database:
             )
         ''')
 
-        
+        #tabela pentru acces
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS access (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id_persoana INTEGER NOT NULL,
+                ora TEXT NOT NULL,
+                sens TEXT NOT NULL,
+                poarta TEXT NOT NULL
+            )
+        ''')
+        self.connection.commit()
 
