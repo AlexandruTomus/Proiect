@@ -15,9 +15,7 @@ def receive_json():
         return jsonify({"error": "Missing data fields"}), 400
 
     try:
-        db = Database()
-
-        #insereaza date in db
+        db = Database()      ##insereaza date in db
         db.cursor.execute('''
             INSERT INTO access (id_persoana, ora, sens, poarta)
             VALUES (?, ?, ?, ?)
