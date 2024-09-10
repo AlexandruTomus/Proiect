@@ -23,7 +23,7 @@ class Database:
 
 
 
-#adaugam tabela access in baza pentru stocare date
+#adaugam tabela acces in baza pentru stocare date
 
 
 class Database:
