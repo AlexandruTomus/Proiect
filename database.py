@@ -18,12 +18,12 @@ class Database:
         ''')
         self.connection.commit()
 
-    def close(self):
-        self.connection.close()
+    # def close(self):
+    #     self.connection.close()
 
 
 
-#adaugam tabela access in baza pentru stocare date
+#tabela acces in baza pentru stocare date
 
 
 class Database:
@@ -55,5 +55,6 @@ class Database:
             )
         ''')
         self.connection.commit()
-
+    def close(self):
+        self.connection.close()
 #branch nou feature/process-csv
